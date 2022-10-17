@@ -6,3 +6,4 @@
                         <li class="list-group-item">{$client['nombre_apellido']} -{$client['dni']}-{$client['direccion']}-{$client['fecha_nacimiento']}-{$client['tipo_cuenta']}-{$client['num_cuenta']} - {$client['moneda']}- {$client['saldo']}- {$client['ultimo_movimiento']}</li>
                      {/foreach}  
             </ul>
+</div>            
