@@ -1,8 +1,34 @@
 {include file="header.tpl"}
 <div class='content'>
-            <h1>Listado de clientes</h1>
+<h1>Listado de clientes</h1>
+<div class="content-list">
+   <div class="list">
+      <ul>
+         <li>Nombre y apellido</li>
+         <li>Dni</li>
+         <li>Direccion</li>
+         <li>Fecha de nacimiento</li>
+         <li>Tipo de cuenta</li>
+         <li>Numero de cuenta</li>
+         <li>Saldo</li>
+         <li>Moneda</li>
+         <li>Ultimo movimiento</li>
+      </ul>
+   </div>
+      <div class="data-list">
+         {foreach from= $clients  item=client}
             <ul class='list-group'>
-                     {foreach from= $clients  item=client}
-                        <li class="list-group-item"><b>Nombre y apellido: </b>{$client['nombre_apellido']} <b>Dni: </b>{$client['dni']} <b>Direccion: </b>{$client['direccion']} <b>Fecha de Nacimiento: </b>{$client['fecha_nacimiento']}<b>Tipo de cuenta: </b>{$client['tipo_cuenta']} <b>Numero de cuenta: </b>{$client['num_cuenta']} <b>Saldo: $</b>{$client['saldo']} <b>Moneda: </b>{$client['moneda']} <b>Ultimo movimiento: </b>{$client['ultimo_movimiento']}</li>
-                     {/foreach}  
-            </ul>
+               <li>{$client['nombre_apellido']}</li>
+               <li>{$client['dni']}</li>
+               <li>{$client['direccion']}</li>
+               <li>{$client['fecha_nacimiento']}</li>
+               <li>{$client['tipo_cuenta']}</li>
+               <li>{$client['num_cuenta']}</li>
+               <li>${$client['saldo']}</li>
+               <li>{$client['moneda']}</li>
+               <li>{$client['ultimo_movimiento']}</li>
+            </ul>   
+         {/foreach}
+      </div>
+   </div>
+</div>                       

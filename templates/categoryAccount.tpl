@@ -1,9 +1,34 @@
 {include file="header.tpl"}
-<div class='content'>
+<div class="content">
             <h1>Listado de cuentas</h1>
-            <ul class='list-group'>
+            <div class="content-list">
+               <div class="list">
+                  <ul>
+                     <li>Nombre y apellido</li>
+                     <li>Dni</li>
+                     <li>Direccion</li>
+                     <li>Fecha de nacimiento</li>
+                     <li>Tipo de cuenta</li>
+                     <li>Numero de cuenta</li>
+                     <li>Moneda</li>
+                     <li>Saldo</li>
+                     <li>Ultimo movimiento</li>
+                  </ul>
+               </div>
+               <div class="data-list">
                      {foreach from= $clients  item=client}
-                        <li class="list-group-item">{$client['nombre_apellido']} -{$client['dni']}-{$client['direccion']}-{$client['fecha_nacimiento']}-{$client['tipo_cuenta']}-{$client['num_cuenta']} - {$client['moneda']}- {$client['saldo']}- {$client['ultimo_movimiento']}</li>
+                     <ul class='list-group'>
+                        <li>{$client['nombre_apellido']}</li>
+                        <li>{$client['dni']}</li>
+                        <li>{$client['direccion']}</li>
+                        <li>{$client['fecha_nacimiento']}</li>
+                        <li>{$client['tipo_cuenta']}</li>
+                        <li>{$client['num_cuenta']}</li>
+                        <li>{$client['moneda']}</li>
+                        <li>${$client['saldo']}</li>
+                        <li>{$client['ultimo_movimiento']}</li>
+                     </ul>
                      {/foreach}  
-            </ul>
+               </div>
+            </div>
 </div>            

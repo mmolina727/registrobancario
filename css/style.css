@@ -3,6 +3,52 @@
     padding: 0;
 }
 
-.content-list{
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+form{
+    color:white;
+}
+
+.content{
     padding: 50px;
+    background: linear-gradient(90deg, rgba(0,36,5,1) 0%, rgba(9,121,80,1) 35%, rgba(0,212,255,1) 100%);
+    height: auto;
+}
+
+.content-list{
+    border:solid whitesmoke;
+}
+
+.list ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    font-family: sans-serif;
+    background-color: darkolivegreen;
+    font-weight: 600;
+    padding: 5px;
+}
+
+.data-list .list-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border:solid whitesmoke;
+    margin: 5px;
+}
+
+.data-list .list-group li{
+    font-family:sans-serif;
+    list-style: none;
+    align-items: center;
+    font-style: oblique;
+}
+
+.list-group li{
+    font-size: 17px;
+    color: white;
 }
